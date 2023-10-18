@@ -1,23 +1,23 @@
 <template>
   <nav>
-    <ul class="nav justify-content-end">
-      <li class="nav-item">
-        <router-link to="/"><a class="nav-link">Home</a></router-link>
-      </li>
-      <li class="nav-item">
-        <router-link to="/skills"><a class="nav-link">Skills</a></router-link>
-      </li>
-      <li class="nav-item">
-        <router-link to="/projects"><a class="nav-link">Projects</a></router-link>
-      </li>
-      <li class="nav-item">
-        <router-link to="/skills"><a class="nav-link">Contact</a></router-link>
-      </li>
-    </ul>
-    <button class="btn btn-primary" type="button">lwakd</button>
-
+      <router-link to="/"><a>Home</a></router-link>
+      <router-link to="/skills"><a>Skills</a></router-link>
+      <router-link to="/projects"><a>Projects</a></router-link>
+      <router-link to="/skills"><a>Contact</a></router-link>
   </nav>
   <router-view/>
 </template>
-<script setup>
-</script>
+
+<style>
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    margin: 2rem;
+  }
+
+</style>

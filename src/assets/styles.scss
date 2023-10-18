@@ -1,11 +1,56 @@
-@import '../../node_modules/bootstrap/scss/bootstrap';
-
-$primary:       #1D1A39;
+$primary:       #f1faee;
 $secondary:     #451952;
 $success:       #662549;
-$info:          #F39F5A;
-$warning:       #AE445A;
-$danger:        $red;
+$error:         #e63946;
+$text:          white;
+$textHover:     #a8dadc;
 $light:         #E8BCB9;
-$dark:          $gray-900;
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(../assets/background.svg);
+    background-repeat: repeat;
+}
+
+a {
+    color: $text;
+    font-size: 1.5rem;
+    text-decoration: none;    
+}
+
+a:hover {
+    color: $textHover;
+}
+
+p {
+    font-size: 1rem;
+    color: $text;
+}
+
+h1 {
+    font-size: 3rem;
+    color: $text;
+}
+
+h2 {
+    font-size: 2.7rem;
+    color: $text;
+}
+
+h3 {
+    font-size: 2.6rem;
+    color: $text;
+}
+
+h4 {
+    font-size: 2.3rem;
+    color: $text;
+}
+
+.content {
+    padding: 5rem;
+}

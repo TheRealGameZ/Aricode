@@ -1,5 +1,7 @@
 <template>
-  <under-construction></under-construction>
+  <div class="content">
+    <under-construction></under-construction>
+  </div>
 </template>
 
 <script>
