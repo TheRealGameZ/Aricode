@@ -2,7 +2,7 @@ $primary:       #f1faee;
 $secondary:     #451952;
 $success:       #662549;
 $error:         #e63946;
-$text:          white;
+$text:          #EDDDD4;
 $textHover:     #a8dadc;
 $light:         #E8BCB9;
 
@@ -11,10 +11,11 @@ $light:         #E8BCB9;
     padding: 0;
 }
 
-body{
-    //background-image: url(../assets/background.svg);
-    //background-repeat: repeat;
-    background-color: #919190;
+.backgroundContainer {
+    background-image: url(../assets/background.svg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
 }
 
 a {
@@ -54,4 +55,14 @@ h4 {
 
 .content {
     padding: 5rem;
+    background-color: #283D3B;
+}
+
+article>header{
+    text-align: center;
+}
+article>header>h2{
+    text-decoration-line: underline;
+    text-underline-offset: 20px;
+    line-height: 6rem;
 }
