@@ -1,10 +1,13 @@
 $primary:       #f1faee;
-$secondary:     #451952;
+$secondary:     #C44536;
 $success:       #662549;
-$error:         #e63946;
+$error:         #C44536;
 $text:          #EDDDD4;
 $textHover:     #a8dadc;
 $light:         #E8BCB9;
+$warning: #C44536;
+
+@import '../../node_modules/bootstrap/scss/bootstrap';
 
 * {
     margin: 0;
