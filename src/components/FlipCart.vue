@@ -1,0 +1,81 @@
+<script>
+  export default {
+    props: ['title', 'content']
+  }
+</script>
+
+<template>
+  <div class="card-flip">
+    <div class="flip">
+      <div class="front">
+        <!-- front content -->
+        <div class="card">
+          <div class="card-block">
+            <h4>{{ title }}</h4>
+          </div>
+        </div>
+      </div>
+      <div class="back">
+        <!-- back content -->
+        <div class="card">
+          <div class="card-block">
+            <p class="card-text">{{ content }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.card-flip {
+  perspective: 1000px;
+  &:hover .flip,
+  &.hover .flip {
+    transform: rotateY(180deg);
+  }
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  background-size: cover;
+  border-radius: 15px;
+  border: 3px solid #4cb0ac;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #283D3B;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.40);
+}
+
+.card-flip,
+.front,
+.back {
+  width: 300px;
+  height: 400px;
+}
+
+.flip {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.front,
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+</style>

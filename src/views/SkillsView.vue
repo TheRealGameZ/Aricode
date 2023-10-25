@@ -8,8 +8,8 @@
 </script>
 
 <template>
-    <div class="content ">
-        <div class="container-fluid customBorder">
+    <div class="content">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-10">
                     <div v-if="selectedItem === 'about'">
