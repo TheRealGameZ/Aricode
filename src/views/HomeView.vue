@@ -10,5 +10,4 @@ export default {
   name: 'HomeView',
   components: {UnderConstruction}
 }
-}
 </script>
