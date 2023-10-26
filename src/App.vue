@@ -1,13 +1,13 @@
 <template>
-  <navigation-bar></navigation-bar>
+  <home-view></home-view>
 </template>
 
 
 <script>
-import NavigationBar from './components/NavigationBar.vue';
+import {defineComponent} from "vue";
+import HomeView from "@/views/HomeView.vue";
 
-export default {
-  components: {
-    NavigationBar
-  }}
+export default defineComponent({
+  components: {HomeView}
+})
 </script>
