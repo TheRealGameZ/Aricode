@@ -37,8 +37,8 @@
 }
 
 .card {
-  width: 300px;
-  height: 400px;
+  width: 250px;
+  height: 250px;
   background-size: cover;
   border-radius: 15px;
   border: 3px solid #4cb0ac;
@@ -52,8 +52,8 @@
 .card-flip,
 .front,
 .back {
-  width: 300px;
-  height: 400px;
+  width: 250px;
+  height: 250px;
 }
 
 .flip {
