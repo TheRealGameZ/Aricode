@@ -41,12 +41,12 @@
   height: 250px;
   background-size: cover;
   border-radius: 15px;
-  border: 3px solid #4cb0ac;
+  border: 3px solid rgba(87, 87, 87, 0.40);
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #283D3B;
-  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.40);
+  background-color: #F5F5F5;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.20);
 }
 
 .card-flip,

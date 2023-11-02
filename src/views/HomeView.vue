@@ -123,11 +123,15 @@
       </section>
     </article>
   </main>
+  <footer>
+    <footer-bar></footer-bar>
+  </footer>
 </template>
 
 <script>
 import FlipCart from "@/components/FlipCart.vue";
 import NavigationBar from "@/components/NavigationBar.vue";
+import FooterBar from "@/components/FooterBar.vue";
 
 window.addEventListener("scroll", reveal);
 function reveal() {
@@ -147,6 +151,7 @@ function reveal() {
 export default {
   name: 'HomeView',
   components: {
+    FooterBar,
     NavigationBar,
     FlipCart
   },

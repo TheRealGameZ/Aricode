@@ -1,8 +1,8 @@
 // --------------------- COLORS ------------------------ //
-$primary:       #283D3B;
-$secondary:     #197278;
-$text:          #EDDDD4;
-$highlight:     #C44536;
+$primary:       #F5F5F5;
+$secondary:     #575757;
+$text:          #000000;
+$highlight:     #f5c014;
 $error:         #772E25;
 
 $base-font-size: 16px;
@@ -159,10 +159,12 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-nav>a{
-    margin: 0 20px;
+    a {
+        margin: 0 20px;
+        font-size: calculate-font-size(25px);
+    }
+
 }
 
 // --------------------- MAIN ------------------------ //
@@ -192,7 +194,7 @@ article>header {
 }
 
 #projects{
-    background-color: #35504e;
+    background-color: $primary;
 }
 
 .skills>div{
@@ -233,6 +235,39 @@ article>header {
     background-color: $text;
     color: $highlight;
     transition: all 0.5s;
+}
+
+// --------------------- FOOTER ------------------------//
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 30px;
+
+    .socialMediaFooter{
+        grid-column: 1;
+        grid-row: 1;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .miniNav{
+        grid-column: 2;
+        grid-row: 1;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .copyRight{
+        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-row-end: 3;
+        grid-column-end: 3;
+        align-self: center;
+        justify-self: center;
+    }
+
 }
 
 
