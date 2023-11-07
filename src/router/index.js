@@ -1,8 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import SkillsView from "@/views/SkillsView.vue";
-import DatenschutzView from "@/views/DatenschutzView.vue";
-import ImpressumView from "@/views/ImpressumView.vue";
 import ContactView from "@/views/ContactView.vue";
 import ProjectsView from "@/views/ProjectsView.vue";
 
@@ -18,16 +16,6 @@ const routes = [
     component: SkillsView
   },
   {
-    path: '/datenschutz',
-    name: 'datenschutz',
-    component: DatenschutzView
-  },
-  {
-    path: '/impressum',
-    name: 'impressum',
-    component: ImpressumView
-  },
-  {
     path: '/contact',
     name: 'contact',
     component: ContactView
@@ -36,11 +24,6 @@ const routes = [
     path: '/projects',
     name: 'projects',
     component: ProjectsView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   }
 ]
 

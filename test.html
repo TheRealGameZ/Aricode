@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <div class="polygon">
+              <p class="text">Text 1</p>
+            </div>
+            <h3>Überschrift 1</h3>
+            <p>Absatz 1</p>
+          </div>
+          <div class="col-3">
+            <div class="polygon">
+              <p class="text">Text 2</p>
+            </div>
+            <h3>Überschrift 2</h3>
+            <p>Absatz 2</p>
+          </div>
+          <div class="col-3">
+            <div class="polygon">
+              <p class="text">Text 3</p>
+            </div>
+            <h3>Überschrift 3</h3>
+            <p>Absatz 3</p>
+          </div>
+          <div class="col-3">
+            <div class="polygon">
+              <p class="text">Text 4</p>
+            </div>
+            <h3>Überschrift 4</h3>
+            <p>Absatz 4</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="polygon">
+              <img src="bild.jpg" alt="Bild">
+            </div>
+            <h2>Überschrift 5</h2>
+            <p>Absatz 5</p>
+          </div>
+          <div class="col-6">
+            <div class="polygon">
+              <img src="bild2.jpg" alt="Bild 2">
+            </div>
+            <h2>Überschrift 6</h2>
+            <p>Absatz 6</p>
+          </div>
+        </div>
+      </div>      
+</body>
+<style>
+    .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.col-3 {
+  width: 25%;
+  padding: 10px;
+}
+
+.col-6 {
+  width: 50%;
+  padding: 10px;
+}
+
+.polygon {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-color: #f1f1f1;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #333;
+}
+
+.polygon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h2, h3 {
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+}
+
+p {
+  font-size: 16px;
+  color: #666;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .col-3, .col-6 {
+    width: 100%;
+  }
+}
+
+</style>
+</html>

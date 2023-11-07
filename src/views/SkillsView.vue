@@ -8,7 +8,7 @@
 </script>
 
 <template>
-    <div class="content">
+    <div class="content" style="height: 2000px">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-10">

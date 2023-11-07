@@ -1,8 +1,16 @@
-<template>
-  <nav>
-      <a href="/skills">Home</a>
-      <router-link to="/skills"><a>Skills</a></router-link>
-      <router-link to="/projects"><a>Projects</a></router-link>
-      <router-link to="/skills"><a>Contact</a></router-link>
+<template> 
+  <nav class="navbar navbar-expand-lg"> 
+    <div class="container"> 
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup"> 
+        <div class="navbar-nav mx-auto">
+          <router-link class="navItem" to="/">Home</router-link>
+          <router-link class="navItem" to="/skills">Skills</router-link>
+          <router-link class="navItem" to="/projects">Projects</router-link>
+          <router-link class="navItem" to="/skills">Contact</router-link>
+        </div> 
+      </div> 
+    </div> 
   </nav>
+
+  
 </template>

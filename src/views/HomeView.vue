@@ -1,137 +1,56 @@
 <template>
-  <header class="mainHeader">
-    <div class="headerContent">
-
-      <div class="navigation">
-        <navigation-bar></navigation-bar>
-      </div>
-
-      <div class="welcomeText">
-        <h1>Hi i&#x27;m <span>Andreas Richter</span></h1>
-        <button style="margin-top: 30px" type="button" class="btnMain">Contact me</button>
-      </div>
-
-      <div class="socialMedia">
-        <ul style="list-style: none">
-          <li><i class="bi bi-linkedin"></i></li>
-          <li><i class="bi bi-linkedin"></i></li>
-          <li><i class="bi bi-linkedin"></i></li>
-        </ul>
-      </div>
-
+  <div class="row">
+    <header class="text-center">
+        <h2>About</h2>
+        <div class="horizontalLine"></div>
+    </header>
+    <div class="container grid justify-content-evenly">
+        <div class="row gap-1 text-center" >
+            <div class="col">
+                <div class="polygon mx-auto d-flex align-items-center justify-content-center mb-4">
+                  <i class="bi bi-cart4"></i>
+                </div>
+                <h3>Versatile in E-Commerce</h3>
+                <p> Proficient in Salesforce - crafting tailored webshop solutions</p>
+            </div>
+            <div class="col">
+                <div class="polygon mx-auto d-flex align-items-center justify-content-center mb-4">
+                  <i class="bi bi-laptop"></i>
+                </div>
+                <h3>Organized and Efficient</h3>
+                <p>Structured work approach for orderly results</p>
+            </div>
+            <div class="col">
+                <div class="polygon mx-auto d-flex align-items-center justify-content-center mb-4">
+                  <i class="bi bi-chat-square-dots"></i>
+                </div>
+                <h3>Collaborative Tech Mentor</h3>
+                <p>Giving basic Code-Courses</p>
+            </div>
+            <div class="col">
+                <div class="polygon mx-auto d-flex align-items-center justify-content-center mb-4">
+                  <i class="bi bi-lightbulb"></i>
+                </div>
+                <h3>Innovative Architect</h3>
+                <p>Pioneer in introducing Headless-Salesforce architecture</p>
+            </div>
+        </div>
     </div>
-  </header>
-
-  <main>
-    <article class="reveal" id="aboutMe">
-      <header>
-        <h2>About me</h2>
-      </header>
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    </article>
-    <article class="reveal" id="skills">
-      <header>
-        <h2>Skills</h2>
-      </header>
-      <div class="skills">
-        <div v-for="(card, index) in flipCards" :key="index">
-          <flip-cart :title="card.title" :content="card.content"></flip-cart>
+    <div class="container" style="margin-top: 100px;">
+        <div class="row">
+            <div class="col text-center">
+                <div class="polygon mx-auto d-flex align-items-center justify-content-center mb-4" id="picture">
+                </div>
+                <h2>Who is this Guy?</h2>
+                <p>I'm a software engineer based in Gera with 2 years of experience in Commerce. My focus area for the past few months has been a mix of front- and backend development in Salesforce B2B Commerce.</p>
+            </div>
+            <div class="col-7"></div>
         </div>
-      </div>
-    </article>
-    <article class="reveal" id="projects">
-      <header>
-        <h2>Projects</h2>
-      </header>
-      <div class="skills">
-        <div v-for="(card, index) in flipCards" :key="index">
-          <flip-cart :title="card.title" :content="card.content"></flip-cart>
-        </div>
-      </div>
-    </article>
-    <article class="reveal" id="experience">
-      <header>
-        <h2>Experience</h2>
-      </header>
-      <section id="cd-timeline" class="cd-container">
-        <div class="cd-timeline-block">
-          <div class="cd-timeline-img cd-picture">
-          </div>
-          <div class="cd-timeline-content">
-            <h2>Title of section 1</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-            <span class="cd-date">Jan 14</span>
-          </div>
-        </div>
-
-        <div class="cd-timeline-block">
-          <div class="cd-timeline-img cd-movie">
-          </div>
-          <div class="cd-timeline-content">
-            <h2>Title of section 2</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
-            
-            <span class="cd-date">Jan 18</span>
-          </div>
-        </div>
-
-        <div class="cd-timeline-block">
-          <div class="cd-timeline-img cd-picture">
-          </div>
-
-          <div class="cd-timeline-content">
-            <h2>Title of section 3</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>
-            
-            <span class="cd-date">Jan 24</span>
-          </div>
-        </div>
-
-        <div class="cd-timeline-block">
-          <div class="cd-timeline-img cd-location">
-          </div>
-
-          <div class="cd-timeline-content">
-            <h2>Title of section 4</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-            <span class="cd-date">Feb 14</span>
-          </div>
-        </div>
-
-        <div class="cd-timeline-block">
-          <div class="cd-timeline-img cd-location">
-          </div>
-
-          <div class="cd-timeline-content">
-            <h2>Title of section 5</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
-            
-            <span class="cd-date">Feb 18</span>
-          </div>
-        </div>
-
-        <div class="cd-timeline-block">
-          <div class="cd-timeline-img cd-movie">
-          </div>
-
-          <div class="cd-timeline-content">
-            <h2>Final Section</h2>
-            <p>This is the content of the last section</p>
-            <span class="cd-date">Feb 26</span>
-          </div>
-        </div>
-      </section>
-    </article>
-  </main>
-  <footer>
-    <footer-bar></footer-bar>
-  </footer>
+    </div>
+</div>
 </template>
 
 <script>
-import FlipCart from "@/components/FlipCart.vue";
-import NavigationBar from "@/components/NavigationBar.vue";
-import FooterBar from "@/components/FooterBar.vue";
 
 window.addEventListener("scroll", reveal);
 function reveal() {
@@ -150,25 +69,19 @@ function reveal() {
 
 export default {
   name: 'HomeView',
-  components: {
-    FooterBar,
-    NavigationBar,
-    FlipCart
-  },
   data() {
     return {
       flipCards: [
-        { title: "Card 1", content: "Content for Card 1" },
-        { title: "Card 2", content: "Content for Card 2" },
-        { title: "Card 2", content: "Content for Card 2" },
-        { title: "Card 2", content: "Content for Card 2" },
-        { title: "Card 2", content: "Content for Card 2" },
-        { title: "Card 2", content: "Content for Card 2" },
-        { title: "Card 2", content: "Content for Card 2" },
-        { title: "Card 2", content: "Content for Card 2" },
-        { title: "Card 2", content: "Content for Card 2" },
-        { title: "Card 2", content: "Content for Card 2" },
-        { title: "Card 2", content: "Content for Card 2" },
+        { title: "Git / GitHub / Gitlab", content: "Content for Card 1" },
+        { title: "HTML/CSS", content: "Content for Card 2" },
+        { title: "Jira & Confluence", content: "Content for Card 2" },
+        { title: "Salesforce / Commerce-Cloud", content: "Content for Card 2" },
+        { title: "SpringBoot & Thymeleaf", content: "Content for Card 2" },
+        { title: "WPF/XAML", content: "Content for Card 2" },
+        { title: "C# / C", content: "Content for Card 2" },
+        { title: "Java", content: "Content for Card 2" },
+        { title: "JavaScript", content: "Content for Card 2" },
+        { title: "Vue.js", content: "Content for Card 2" },
       ]
     };
   }

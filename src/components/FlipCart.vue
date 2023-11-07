@@ -46,6 +46,7 @@
   align-items: center;
   justify-content: center;
   background-color: #F5F5F5;
+  text-align: center;
   box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.20);
 }
 
