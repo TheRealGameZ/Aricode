@@ -48,9 +48,14 @@
         </div>
     </div>
 </div>
+
+<PercentageCircle :percentage="100"></PercentageCircle>
+
 </template>
 
 <script>
+import PercentageCircle from '@/components/PercentageCircle.vue';
+
 
 window.addEventListener("scroll", reveal);
 function reveal() {
@@ -68,23 +73,24 @@ function reveal() {
 }
 
 export default {
-  name: 'HomeView',
-  data() {
-    return {
-      flipCards: [
-        { title: "Git / GitHub / Gitlab", content: "Content for Card 1" },
-        { title: "HTML/CSS", content: "Content for Card 2" },
-        { title: "Jira & Confluence", content: "Content for Card 2" },
-        { title: "Salesforce / Commerce-Cloud", content: "Content for Card 2" },
-        { title: "SpringBoot & Thymeleaf", content: "Content for Card 2" },
-        { title: "WPF/XAML", content: "Content for Card 2" },
-        { title: "C# / C", content: "Content for Card 2" },
-        { title: "Java", content: "Content for Card 2" },
-        { title: "JavaScript", content: "Content for Card 2" },
-        { title: "Vue.js", content: "Content for Card 2" },
-      ]
-    };
-  }
+    name: 'HomeView',
+    data() {
+        return {
+            flipCards: [
+                { title: "Git / GitHub / Gitlab", content: "Content for Card 1" },
+                { title: "HTML/CSS", content: "Content for Card 2" },
+                { title: "Jira & Confluence", content: "Content for Card 2" },
+                { title: "Salesforce / Commerce-Cloud", content: "Content for Card 2" },
+                { title: "SpringBoot & Thymeleaf", content: "Content for Card 2" },
+                { title: "WPF/XAML", content: "Content for Card 2" },
+                { title: "C# / C", content: "Content for Card 2" },
+                { title: "Java", content: "Content for Card 2" },
+                { title: "JavaScript", content: "Content for Card 2" },
+                { title: "Vue.js", content: "Content for Card 2" },
+            ]
+        };
+    },
+    components: { PercentageCircle }
 }
 
 </script>
