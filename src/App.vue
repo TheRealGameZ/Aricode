@@ -4,7 +4,7 @@
       <div class="row headerContent justify-content-md-center d-flex align-items-top" style="padding-top: 150px;">
         <div class="col-md-auto">
           <h1>Hi i&#x27;m <span>Andreas Richter</span></h1>
-          <button style="margin-top: 30px" type="button" class="btnMain">Contact me</button>
+          <button style="margin-top: 30px" type="button" class="btnPrimary">Contact me</button>
         </div>
       </div>
     </div>
@@ -31,4 +31,21 @@ import FooterBar from "./components/FooterBar.vue";
 export default defineComponent({
   components: { NavigationBar,FooterBar }
 })
+
+window.addEventListener('scroll', function() {
+  var elements = document.querySelectorAll('.fade-in');
+  elements.forEach(function(element) {
+    var position = element.getBoundingClientRect();
+    if(position.top < window.innerHeight && position.bottom >= 0) {
+      element.classList.add('visible');
+    }
+  });
+});
 </script>
+
+<style>
+  @font-face {
+    font-family: 'Zilla Slab';
+    src: local('Zilla Slab'), url('assets/ZillaSlab-Medium.ttf') format("truetype");
+  }
+</style>

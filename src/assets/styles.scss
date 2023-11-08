@@ -1,9 +1,13 @@
 // --------------------- COLORS ------------------------ //
 $primary:       #F5F5F5;
-$secondary:     #575757;
+$secondary: rgba(87, 87, 87, 0.4);
 $text:          #000000;
-$highlight:     #f5c014;
+$highlight: rgb(245, 192, 20);
 $error:         #772E25;
+
+*{
+  font-family: 'Zilla Slab', serif;
+}
 
 header {
     display: grid;
@@ -116,12 +120,161 @@ header {
 }
 
 .footerContainer{
-    background-color: $secondary;
+    background-color: #F5F5F5;
+    height: 10vh;
+
+    i {
+      font-size: 22px;
+      transition: .5s;
+
+      &:hover{
+        color: $highlight;
+        cursor: pointer;
+        border-radius: 100%;
+        box-shadow: 0 0 2px $highlight;
+        text-shadow: 0 0 2px $highlight;
+        transition: .1s;
+      }
+
+      &:hover::before{
+        transform: scale(1.5);
+        transition: .3s;
+      }
+
+    }
+
 }
 
 #picture{
     background-image: url("ownPicture.jpg");
     background-size: cover;
-    height: 300px;
-    width: 300px;
+    height: 350px;
+    width: 350px;
+}
+
+.fade-in {
+  opacity: 0;
+
+  &.visible{
+    animation: load 1.5s;
+    animation-fill-mode: forwards;
+
+    &.anim-delay-500ms   { animation-delay: 0.2s }
+    &.anim-delay-1000ms  { animation-delay: 0.6s }
+    &.anim-delay-1500ms  { animation-delay: 1s }
+    &.anim-delay-2000ms  { animation-delay: 1.4s }
+
+  }
+}
+
+@keyframes load {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.btnPrimary{
+  background-color: transparent;
+  font-size: 20px;
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 5px 15px;
+  animation: btnBounce 4s infinite;
+  transition-duration: 0.4s;
+
+
+  &:hover{
+    border-color: $highlight;
+    color: $highlight;
+  }
+
+  @keyframes btnBounce {
+    5%,
+    50% {
+      transform: scale(1);
+    }
+
+    10% {
+      transform: scale(1);
+    }
+
+    15% {
+      transform: scale(1);
+    }
+
+    20% {
+      transform: scale(1) rotate(-5deg);
+    }
+
+    25% {
+      transform: scale(1) rotate(5deg);
+    }
+
+    30% {
+      transform: scale(1) rotate(-3deg);
+    }
+
+    35% {
+      transform: scale(1) rotate(2deg);
+    }
+
+    40% {
+      transform: scale(1) rotate(0);
+    }
+  }
+}
+
+.cardFlipEffect {
+  perspective: 1000px;
+  &:hover .cardFlipAnimation,
+  &.hover .cardFlipAnimation {
+    transform: rotateY(180deg);
+  }
+}
+
+.cardBasicStyling {
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  border-radius: 15px;
+  border: 3px solid $highlight;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F5F5F5;
+  text-align: center;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.20);
+}
+
+.cardFlipEffect,
+.cardFrontStyle,
+.cartBackStyle {
+  width: 250px;
+  height: 250px;
+}
+
+.cardFlipAnimation {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.cardFrontStyle,
+.cartBackStyle {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cardFrontStyle {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.cartBackStyle {
+  transform: rotateY(180deg);
 }
