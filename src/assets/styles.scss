@@ -27,6 +27,7 @@ header {
     background-image: url(../assets/background.svg);
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
 
     .headerContent {
         height: 100vh;
@@ -277,4 +278,26 @@ header {
 
 .cartBackStyle {
   transform: rotateY(180deg);
+}
+
+.timelineBtn{
+  text-decoration: none;
+  cursor: pointer;
+  color: rgba(85, 85, 85, 0.50);
+}
+
+.btnContainer{
+  padding: 10px;
+  border-radius: 50%;
+  border: 2px solid $secondary;
+}
+
+.active{
+  transform: scale(1.25);
+  transition: ease-in 0.2s;
+  border-color: $highlight;
+
+  .timelineBtn{
+    color: $highlight;
+  }
 }

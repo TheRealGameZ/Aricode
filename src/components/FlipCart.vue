@@ -1,6 +1,10 @@
 <script>
+  import QrcodeVue from 'qrcode.vue'
   export default {
-    props: ['title', 'content']
+    props: ['title', 'content'],
+    components: {
+      QrcodeVue
+    },
   }
 </script>
 
@@ -19,7 +23,7 @@
         <!-- back content -->
         <div class="cardBasicStyling">
           <div class="card-block">
-            <p class="card-text">{{ content }}</p>
+            <qrcode-vue :value="content"></qrcode-vue>
           </div>
         </div>
       </div>
