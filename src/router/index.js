@@ -3,6 +3,9 @@ import HomeView from '../views/HomeView.vue'
 import CertificatsView from "@/views/CertificatsView.vue";
 import ContactView from "@/views/ContactView.vue";
 import ProjectsView from "@/views/ProjectsView.vue";
+import DatenschutzView from "@/views/DatenschutzView.vue";
+import ImpressumView from "@/views/ImpressumView.vue";
+
 
 const routes = [
   {
@@ -11,8 +14,8 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/Certificates',
-    name: 'Certificates',
+    path: '/certificates',
+    name: 'certificates',
     component: CertificatsView
   },
   {
@@ -24,6 +27,16 @@ const routes = [
     path: '/projects',
     name: 'projects',
     component: ProjectsView
+  },
+  {
+    path: '/impressum',
+    name: 'impressum',
+    component: ImpressumView
+  },
+  {
+    path: '/datenschutz',
+    name: 'datenschutz',
+    component: DatenschutzView
   }
 ]
 

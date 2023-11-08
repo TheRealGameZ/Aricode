@@ -124,6 +124,15 @@ header {
     background-color: #F5F5F5;
     height: 10vh;
 
+    a {
+      color: $text;
+      text-decoration: none;
+
+      &:hover{
+        color: $highlight;
+      }
+    }
+
     i {
       font-size: 22px;
       transition: .5s;
@@ -177,21 +186,8 @@ header {
   }
 }
 
-.btnPrimary{
-  background-color: transparent;
-  font-size: 20px;
-  border: 2px solid;
-  border-radius: 10px;
-  padding: 5px 15px;
+.animaBtn{
   animation: btnBounce 4s infinite;
-  transition-duration: 0.4s;
-
-
-  &:hover{
-    border-color: $highlight;
-    color: $highlight;
-  }
-
   @keyframes btnBounce {
     5%,
     50% {
@@ -226,6 +222,24 @@ header {
       transform: scale(1) rotate(0);
     }
   }
+}
+
+.btnPrimary{
+  background-color: transparent;
+  font-size: 20px;
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 5px 15px;
+ 
+  transition-duration: 0.4s;
+
+
+  &:hover{
+    border-color: $highlight;
+    color: $highlight;
+  }
+
+  
 }
 
 .cardFlipEffect {
@@ -301,3 +315,12 @@ header {
     color: $highlight;
   }
 }
+
+.borderContainer{
+  box-shadow: 
+    0px 36px 0px -30px #fff,
+    -36px 0px 0px -30px #fff,
+    0px -36px 0px -30px #fff,
+    36px 0px 0px -30px #fff,
+    0 0 0 5px $highlight;
+  }

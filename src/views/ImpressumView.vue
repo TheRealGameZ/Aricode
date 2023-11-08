@@ -1,11 +1,11 @@
-<script setup>
-
-</script>
-
 <template>
-<h1>Impressum</h1>
-</template>
-
-<style scoped>
-
-</style>
+    <div class="row">
+        <header class="text-center">
+          <h2>Impressum</h2>
+          <div class="horizontalLine"></div>
+        </header>
+        <div class="container">
+          
+        </div>
+    </div>
+  </template>

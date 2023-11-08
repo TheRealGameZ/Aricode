@@ -1,10 +1,8 @@
-<script setup>
-</script>
-
 <template>
-<h1>Projects</h1>
+    <div class="row">
+        <header class="text-center">
+        <h2>Projects</h2>
+        <div class="horizontalLine"></div>
+        </header>
+  </div>
 </template>
-
-<style scoped>
-
-</style>

@@ -4,7 +4,7 @@
       <div class="row headerContent justify-content-md-center d-flex align-items-top" style="padding-top: 150px;">
         <div class="col-md-auto">
           <h1>Hi i&#x27;m <span>Andreas Richter</span></h1>
-          <button style="margin-top: 30px" type="button" class="btnPrimary">Contact me</button>
+          <button style="margin-top: 30px" type="button" class="btnPrimary animaBtn">Contact me</button>
         </div>
       </div>
     </div>

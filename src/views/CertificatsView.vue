@@ -6,7 +6,7 @@
     </header>
     <div class="container">
       <div class="row  g-5">
-        <div class="col d-flex mx-auto justify-content-center align-items-center"
+        <div class="col d-flex mx-auto justify-content-center align-items-center fade-in anim-delay-500ms"
              v-for="(card, index) in flipCards"
              :key="card"
              @mouseover="flipCard(index)">
