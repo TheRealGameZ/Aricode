@@ -6,7 +6,7 @@
     </header>
     <div class="container">
       <div class="row g-4">
-        <div class="col d-flex mx-auto align-items-center justify-content-center  fade-in anim-delay-500ms"
+        <div class="col d-flex mx-auto align-items-center justify-content-center"
              v-for="(card, index) in flipCards"
              :key="card"
              @mouseover="flipCard(index)">
@@ -27,7 +27,8 @@ export default {
       flipCards: require('../assets/data.json').certificates
     };
   },mounted() {
-    document.getElementById('headerContainer').classList.remove('headerHeightSmall');
+    let element = document.getElementById('headerContainer');
+    element.classList.add('headerHeightSmall');
   },
 
   components: {FlipCart },

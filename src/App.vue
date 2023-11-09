@@ -10,7 +10,7 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row fade-in">
       <navigation-bar></navigation-bar>
     </div>
   </div>
@@ -31,7 +31,11 @@ import NavigationBar from "./components/NavigationBar.vue";
 import FooterBar from "./components/FooterBar.vue";
 
 export default defineComponent({
-  components: { NavigationBar,FooterBar }
+  components: { NavigationBar,FooterBar },
+  mounted() {
+    let element = document.getElementById('headerContainer');
+    element.classList.add('headerHeightSmall');
+  }
 })
 
 window.addEventListener('scroll', function() {

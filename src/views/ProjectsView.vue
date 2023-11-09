@@ -8,8 +8,9 @@
 </template>
 <script>
  export default {
-   mounted() {
-     document.getElementById('headerContainer').classList.remove('headerHeightSmall');
-   },
+  mounted() {
+    let element = document.getElementById('headerContainer');
+    element.classList.add('headerHeightSmall');
+  },
  }
 </script>

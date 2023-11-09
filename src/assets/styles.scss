@@ -28,6 +28,7 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    animation: load 2s;
 
     .headerContent {
         height: 100vh;
@@ -39,7 +40,7 @@ header {
             letter-spacing: .02em;
             animation:
                     typing 2s steps(30, end),
-                    blink-caret .75s step-end infinite;
+                    blink-caret .75s step-end infinite 1s;
     
             span {
                 color: $highlight;
@@ -251,17 +252,19 @@ header {
 }
 
 .cardBasicStyling {
-  width: 250px;
+  width: 250px;animation: load 2s;
   height: 250px;
   background-size: cover;
   border-radius: 15px;
-  border: 3px solid rgba(245, 192, 20, 0.3);;
+  border: 3px solid rgba(245, 192, 20, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #F5F5F5;
   text-align: center;
   box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.20);
+  
+  
 }
 
 .cardFlipEffect,
@@ -327,5 +330,11 @@ header {
 
 .headerHeightSmall{
   height: 30vh;
-  background-size: cover;
+  background-image: none;
+  background-color: $primary;
+  
+  button {
+    display: none;
+  }
+
 }
