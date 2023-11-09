@@ -4,7 +4,7 @@ export default {
     return {
       formSubmitted: false,
       formSuccess: false,
-      urlPath : 'aricode.de/post/contactForm'
+      urlPath : 'https://aricode.de/post/contactForm'
     };
   },
   mounted() {
@@ -12,16 +12,44 @@ export default {
     document.getElementById('headerContainer').classList.add('headerHeightSmall');
   },
   methods: {
-    scrollToElement() {
-      this.$nextTick(() => {
-        const element = document.getElementById('contact');
-        if (element) element.scrollIntoView();
-      });
-    },
 
     async submitForm(e) {
-      e.preventDefault();
-    }
+  e.preventDefault();
+  this.formSubmitted = true;
+
+  let name = document.getElementById('nameInput').value;
+  let email = document.getElementById('emailInput').value;
+  let text = document.getElementById('messageInput').value;
+
+  const data = {
+    name: name,
+    email: email,
+    text: text
+  };
+
+  await fetch(this.urlPath, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json' // Set content type to JSON
+    },
+    body: JSON.stringify(data) // Convert data to JSON string
+  })
+    .then(response => {
+      if (response.ok) {
+        return response.text(); // Extract the response body as text
+      } else {
+        throw new Error('Network response was not ok.');
+      }
+    })
+    .then(string => {
+      window.alert(string);
+      this.formSuccess = true;
+    })
+    .catch(error => {
+      console.error('There was a problem with the fetch operation:', error);
+      this.formSuccess = false;
+    });
+  }
   }
 }
 </script>
