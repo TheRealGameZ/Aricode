@@ -14,7 +14,8 @@
       </div>
     </div>
     <div class="row">
-      <a href="/impressum">Impressum</a><a href="/datenschutz">Datenschutzerklärung</a>
+      
+      <router-link to="/impressum"><a href="">Impressum</a></router-link><router-link to="/datenschutz"><a href="">Datenschutzerklärung</a></router-link>
     </div>
     <div class="row mt-2">
       <p>© 2023, Andreas Richter. Alle Rechte vorbehalten.</p>
