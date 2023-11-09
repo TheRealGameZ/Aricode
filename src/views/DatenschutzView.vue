@@ -42,3 +42,11 @@
     </div>
 </template>
 
+<script>
+export default {
+  mounted() {
+    document.getElementById('headerContainer').classList.add('headerHeightSmall');
+  }
+}
+
+</script>

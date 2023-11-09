@@ -1,8 +1,8 @@
 // --------------------- COLORS ------------------------ //
 $primary:       #F5F5F5;
-$secondary: rgba(87, 87, 87, 0.4);
+$secondary:     rgba(87, 87, 87, 0.4);
 $text:          #000000;
-$highlight: rgb(245, 192, 20);
+$highlight:     rgb(245, 192, 20);
 $error:         #772E25;
 
 *{
@@ -255,7 +255,7 @@ header {
   height: 250px;
   background-size: cover;
   border-radius: 15px;
-  border: 3px solid $highlight;
+  border: 3px solid rgba(245, 192, 20, 0.3);;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -324,3 +324,8 @@ header {
     36px 0px 0px -30px #fff,
     0 0 0 5px $highlight;
   }
+
+.headerHeightSmall{
+  height: 30vh;
+  background-size: cover;
+}

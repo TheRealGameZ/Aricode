@@ -5,6 +5,9 @@ import { ref } from "vue";
 export default {
   name: "HomeView",
   components: { PercentageCircle },
+    mounted() {
+      document.getElementById('headerContainer').classList.remove('headerHeightSmall');
+    },
 
   setup() {
     const selectedItem = ref("part1");

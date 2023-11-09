@@ -5,8 +5,8 @@
       <div class="horizontalLine"></div>
     </header>
     <div class="container">
-      <div class="row  g-5">
-        <div class="col d-flex mx-auto justify-content-center align-items-center fade-in anim-delay-500ms"
+      <div class="row g-4">
+        <div class="col d-flex mx-auto align-items-center justify-content-center  fade-in anim-delay-500ms"
              v-for="(card, index) in flipCards"
              :key="card"
              @mouseover="flipCard(index)">
@@ -26,7 +26,10 @@ export default {
       flippedCard: null,
       flipCards: require('../assets/data.json').certificates
     };
+  },mounted() {
+    document.getElementById('headerContainer').classList.remove('headerHeightSmall');
   },
+
   components: {FlipCart },
   methods: {
     flipCard(index) {

@@ -6,3 +6,10 @@
         </header>
   </div>
 </template>
+<script>
+ export default {
+   mounted() {
+     document.getElementById('headerContainer').classList.remove('headerHeightSmall');
+   },
+ }
+</script>
