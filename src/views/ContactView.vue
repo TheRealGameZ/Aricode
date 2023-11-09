@@ -21,31 +21,6 @@ export default {
 
     async submitForm(e) {
       e.preventDefault();
-
-      let name =document.getElementById('nameInput');
-      let email =  document.getElementById('emailInput');
-      let message = document.getElementById('messageInput');
-
-      const body = {
-        name : name.value,
-        email : email.value,
-        message : message.value
-      }
-
-      await fetch(this.urlPath, {
-        method: 'POST',
-        body: body
-      }).then(response => {
-
-        this.formSubmitted = true;
-
-        this.formSuccess = response.ok;
-
-      })
-
-
-
-
     }
   }
 }
