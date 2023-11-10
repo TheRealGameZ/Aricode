@@ -21,8 +21,7 @@ export default {
             07603 Gera</p>
 
           <h2>Kontakt</h2>
-          <p>Telefon: 017641577221<br />
-            E-Mail: Andreas_Richter22@gmx.net</p>
+          <p>E-Mail: Andreas_Richter22@gmx.net</p>
 
           <p>Quelle: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a></p>
         </div>

@@ -4,11 +4,10 @@ export default {
     return {
       formSubmitted: false,
       formSuccess: false,
-      urlPath : 'https://aricode.de/post/contactForm'
+      urlPath : 'https://aricode.de/post/contactform'
     };
   },
   mounted() {
-    this.scrollToElement();
     document.getElementById('headerContainer').classList.add('headerHeightSmall');
   },
   methods: {
