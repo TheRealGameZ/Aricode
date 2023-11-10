@@ -42,7 +42,11 @@ export default {
     })
     .then(string => {
       window.alert(string);
+
       this.formSuccess = true;
+      this.formData.name = '';
+      this.formData.email = '';
+      this.formData.message = '';
     })
     .catch(error => {
       console.error('There was a problem with the fetch operation:', error);
@@ -75,7 +79,7 @@ export default {
         </div>
         <div class="mb-3 form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
-          <label class="form-check-label" for="exampleCheck1">Hiermit bestätige ich, dass ich die <a href="/datenschutz">Datenschutzerklärung</a> gelesen habe</label>
+          <label class="form-check-label" for="exampleCheck1">Hiermit bestätige ich, dass ich die <router-link to="/datenschutz"><a href="">Datenschutzerklärung</a></router-link> gelesen habe</label>
         </div>
         <button type="submit" class="btnPrimary">Submit</button>
       </form>
