@@ -16,37 +16,40 @@ export default {
   e.preventDefault();
   this.formSubmitted = true;
 
-  let name = document.getElementById('nameInput').value;
-  let email = document.getElementById('emailInput').value;
-  let text = document.getElementById('messageInput').value;
+  let name = document.getElementById('nameInput');
+  let email = document.getElementById('emailInput');
+  let text = document.getElementById('messageInput');
+  let btn = document.getElementById('submitBtn');
 
   const data = {
-    name: name,
-    email: email,
-    text: text
+    name: name.value,
+    email: email.value,
+    text: text.value
   };
 
   await fetch(this.urlPath, {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json' // Set content type to JSON
+      'Content-Type': 'application/json' 
     },
-    body: JSON.stringify(data) // Convert data to JSON string
+    body: JSON.stringify(data) 
   })
     .then(response => {
       if (response.ok) {
-        return response.text(); // Extract the response body as text
+        return response.text();
       } else {
         throw new Error('Network response was not ok.');
       }
     })
-    .then(string => {
-      window.alert(string);
+    .then(() => {
+
+      name= '';
+      email = '';
+      text = '';
+      btn.disabled = true;
 
       this.formSuccess = true;
-      this.formData.name = '';
-      this.formData.email = '';
-      this.formData.message = '';
+      
     })
     .catch(error => {
       console.error('There was a problem with the fetch operation:', error);
@@ -81,7 +84,7 @@ export default {
           <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
           <label class="form-check-label" for="exampleCheck1">Hiermit bestätige ich, dass ich die <router-link to="/datenschutz"><a href="">Datenschutzerklärung</a></router-link> gelesen habe</label>
         </div>
-        <button type="submit" class="btnPrimary">Submit</button>
+        <button type="submit" class="btnPrimary" id="submitBtn">Submit</button>
       </form>
       <div v-if="formSubmitted" class="mt-3">
         <div v-if="formSuccess" class="alert alert-success">
