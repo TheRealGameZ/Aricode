@@ -5,7 +5,7 @@ export default {
       formSubmitted: false,
       formSuccess: false,
       urlPath : 'https://aricode.de/post/contactform',
-	errormsg: ''
+	    errormsg: ''
     };
   },
   mounted() {
@@ -13,50 +13,64 @@ export default {
   },
   methods: {
 
-    async submitForm(e) {
-  e.preventDefault();
-  this.formSubmitted = true;
+    async makePostRequest(body){
 
-  let name = document.getElementById('nameInput');
-  let email = document.getElementById('emailInput');
-  let text = document.getElementById('messageInput');
-  let btn = document.getElementById('submitBtn');
+        try {
 
-  const data = {
-    name: name.value,
-    email: email.value,
-    text: text.value
-  };
+          //Make Request
+          const response = await fetch(this.urlPath, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+          });
 
-  await fetch(this.urlPath, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json' 
+          //Check if Valid
+          if (response.ok){
+            return response.json;
+          }
+
+
+        }catch(e){
+          throw new Error('Network response was not ok.' + e);
+        }
     },
-    body: JSON.stringify(data) 
-  })
-    .then(response => {
-      if (response.ok) {
-        return response.text();
-      } else {
-        throw new Error('Network response was not ok.');
-      }
-    })
-    .then(() => {
 
-      name.value= '';
-      email.value = '';
-      text.value = '';
-      btn.disabled = true;
+    submitForm(e) {
 
-      this.formSuccess = true;
-      
-    })
-    .catch(error => {
-      console.error('There was a problem with the fetch operation:', error);
-	this.errormsg = error;
-      this.formSuccess = false;
-    });
+        e.preventDefault();
+        this.formSubmitted = true;
+
+        let name = document.getElementById('nameInput');
+        let email = document.getElementById('emailInput');
+        let text = document.getElementById('messageInput');
+        let btn = document.getElementById('submitBtn');
+
+        const data = {
+          name: name.value,
+          email: email.value,
+          text: text.value
+        };
+
+        try {
+
+          this.makePostRequest(data).then( () => {
+            name= '';
+            email = '';
+            text = '';
+
+            this.formSubmitted = true;
+            this.formSuccess = true;
+            btn.disabled = true;
+          });
+
+        }catch(e) {
+          this.formSuccess = false;
+          this.errormsg(e);
+        }
+
+
   }
   }
 }
