@@ -4,7 +4,8 @@ export default {
     return {
       formSubmitted: false,
       formSuccess: false,
-      urlPath : 'https://aricode.de/post/contactform'
+      urlPath : 'https://aricode.de/post/contactform',
+	errormsg: ''
     };
   },
   mounted() {
@@ -43,9 +44,9 @@ export default {
     })
     .then(() => {
 
-      name= '';
-      email = '';
-      text = '';
+      name.value= '';
+      email.value = '';
+      text.value = '';
       btn.disabled = true;
 
       this.formSuccess = true;
@@ -53,6 +54,7 @@ export default {
     })
     .catch(error => {
       console.error('There was a problem with the fetch operation:', error);
+	this.errormsg = error;
       this.formSuccess = false;
     });
   }
@@ -91,7 +93,8 @@ export default {
           Ihre Nachricht wurde erfolgreich gesendet!
         </div>
         <div v-else class="alert alert-danger">
-          Es gab einen Fehler beim Senden Ihrer Nachricht. Bitte versuchen Sie es erneut.
+          Es gab einen Fehler beim Senden Ihrer Nachricht. Bitte versuchen Sie es erneut.<br><br>
+	{{ errormsg }}
         </div>
       </div>
     </div>

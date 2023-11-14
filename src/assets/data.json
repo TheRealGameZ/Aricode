@@ -1,10 +1,10 @@
 {
   "certificates" : [
-    { "title": "Learn JavaScript Course", "content": "https://www.codecademy.com/profiles/AndreasRichter/certificates/705dcb15de0da4dd9d9fc4f3274b430e" },
-    { "title": "Learn SQL Course", "content": "https://www.codecademy.com/profiles/AndreasRichter/certificates/042a4e5884e3eb6ea1f2a12be6abb851" },
-    { "title": "Learn Java Course", "content": "https://www.codecademy.com/profiles/AndreasRichter/certificates/d3f89367b558583e361640f778191345" },
-    { "title": "Learn CSS Course", "content": "https://www.codecademy.com/profiles/AndreasRichter/certificates/9a5bb1fc45b4281af1fffec93b0aaf05" },
-    { "title": "Learn Vue.js Course", "content": "https://www.codecademy.com/profiles/AndreasRichter/certificates/db927a84bf4bba96bb285ee6a85466fc" },
-    { "title": "Learn HTML Course", "content": "https://www.codecademy.com/profiles/AndreasRichter/certificates/9eb0741e5ebef1f9f58a53bfac67d3a7" }
+    { "title": "JavaScript Course", "content": "https://www.codecademy.com/profiles/AndreasRichter/certificates/705dcb15de0da4dd9d9fc4f3274b430e" },
+    { "title": "SQL Course", "content": "https://www.codecademy.com/profiles/AndreasRichter/certificates/042a4e5884e3eb6ea1f2a12be6abb851" },
+    { "title": "Java Course", "content": "https://www.codecademy.com/profiles/AndreasRichter/certificates/d3f89367b558583e361640f778191345" },
+    { "title": "CSS Course", "content": "https://www.codecademy.com/profiles/AndreasRichter/certificates/9a5bb1fc45b4281af1fffec93b0aaf05" },
+    { "title": "Vue.js Course", "content": "https://www.codecademy.com/profiles/AndreasRichter/certificates/db927a84bf4bba96bb285ee6a85466fc" },
+    { "title": "HTML Course", "content": "https://www.codecademy.com/profiles/AndreasRichter/certificates/9eb0741e5ebef1f9f58a53bfac67d3a7" }
   ]
 }
