@@ -15,8 +15,6 @@ export default {
 
     async makePostRequest(body){
 
-        try {
-
           //Make Request
           const response = await fetch(this.urlPath, {
             method: 'POST',
@@ -31,16 +29,12 @@ export default {
             return response.json;
           }
 
-
-        }catch(e){
-          throw new Error('Network response was not ok.' + e);
-        }
+          throw new Error('Network response was not ok.' + response.statusText);
     },
 
     submitForm(e) {
 
         e.preventDefault();
-        this.formSubmitted = true;
 
         let name = document.getElementById('nameInput');
         let email = document.getElementById('emailInput');
@@ -60,12 +54,12 @@ export default {
             email = '';
             text = '';
 
-            this.formSubmitted = true;
             this.formSuccess = true;
             btn.disabled = true;
           });
 
         }catch(e) {
+          this.formSubmitted = true;
           this.formSuccess = false;
           this.errorMsg(e);
         }
