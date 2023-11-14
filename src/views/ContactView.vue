@@ -5,7 +5,7 @@ export default {
       formSubmitted: false,
       formSuccess: false,
       urlPath : 'https://aricode.de/post/contactform',
-	    errormsg: ''
+      errorMsg: ''
     };
   },
   mounted() {
@@ -67,7 +67,7 @@ export default {
 
         }catch(e) {
           this.formSuccess = false;
-          this.errormsg(e);
+          this.errorMsg(e);
         }
 
 
@@ -108,7 +108,7 @@ export default {
         </div>
         <div v-else class="alert alert-danger">
           Es gab einen Fehler beim Senden Ihrer Nachricht. Bitte versuchen Sie es erneut.<br><br>
-	{{ errormsg }}
+          {{ errorMsg }}
         </div>
       </div>
     </div>
