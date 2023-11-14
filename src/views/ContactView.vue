@@ -26,7 +26,7 @@ export default {
 
           //Check if Valid
           if (response.ok){
-            return response.json;
+            return response;
           }
 
           throw new Error('Network response was not ok.' + response.statusText);
@@ -47,22 +47,20 @@ export default {
           text: text.value
         };
 
-        try {
+        this.makePostRequest(data)
+            .then( () => {
+              name= '';
+              email = '';
+              text = '';
 
-          this.makePostRequest(data).then( () => {
-            name= '';
-            email = '';
-            text = '';
-
-            this.formSuccess = true;
-            btn.disabled = true;
-          });
-
-        }catch(e) {
-          this.formSubmitted = true;
-          this.formSuccess = false;
-          this.errorMsg(e);
-        }
+              this.formSuccess = true;
+              btn.disabled = true;
+            })
+            .catch(e => {
+              this.formSubmitted = true;
+              this.formSuccess = false;
+              this.errorMsg(e);
+            });
 
 
   }
