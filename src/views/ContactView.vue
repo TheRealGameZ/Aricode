@@ -52,7 +52,7 @@ export default {
               name= '';
               email = '';
               text = '';
-
+              this.formSubmitted = true;
               this.formSuccess = true;
               btn.disabled = true;
             })
