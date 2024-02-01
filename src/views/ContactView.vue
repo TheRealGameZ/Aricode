@@ -4,7 +4,8 @@ export default {
     return {
       formSubmitted: false,
       formSuccess: false,
-      urlPath : 'https://aricode.de/post/contactform'
+      urlPath : 'https://aricode.de/post/contactform',
+      errorMsg: ''
     };
   },
   mounted() {
@@ -12,49 +13,56 @@ export default {
   },
   methods: {
 
-    async submitForm(e) {
-  e.preventDefault();
-  this.formSubmitted = true;
+    async makePostRequest(body){
 
-  let name = document.getElementById('nameInput');
-  let email = document.getElementById('emailInput');
-  let text = document.getElementById('messageInput');
-  let btn = document.getElementById('submitBtn');
+          //Make Request
+          const response = await fetch(this.urlPath, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+          });
 
-  const data = {
-    name: name.value,
-    email: email.value,
-    text: text.value
-  };
+          //Check if Valid
+          if (response.ok){
+            return response;
+          }
 
-  await fetch(this.urlPath, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json' 
+          throw new Error('Network response was not ok.' + response.statusText);
     },
-    body: JSON.stringify(data) 
-  })
-    .then(response => {
-      if (response.ok) {
-        return response.text();
-      } else {
-        throw new Error('Network response was not ok.');
-      }
-    })
-    .then(() => {
 
-      name.value= '';
-      email.value = '';
-      text.value = '';
-      btn.disabled = true;
+    submitForm(e) {
 
-      this.formSuccess = true;
-      
-    })
-    .catch(error => {
-      console.error('There was a problem with the fetch operation:', error);
-      this.formSuccess = false;
-    });
+        e.preventDefault();
+
+        let name = document.getElementById('nameInput');
+        let email = document.getElementById('emailInput');
+        let text = document.getElementById('messageInput');
+        let btn = document.getElementById('submitBtn');
+
+        const data = {
+          name: name.value,
+          email: email.value,
+          text: text.value
+        };
+
+        this.makePostRequest(data)
+            .then( () => {
+              name= '';
+              email = '';
+              text = '';
+              this.formSubmitted = true;
+              this.formSuccess = true;
+              btn.disabled = true;
+            })
+            .catch(e => {
+              this.formSubmitted = true;
+              this.formSuccess = false;
+              this.errorMsg(e);
+            });
+
+
   }
   }
 }
@@ -91,7 +99,8 @@ export default {
           Ihre Nachricht wurde erfolgreich gesendet!
         </div>
         <div v-else class="alert alert-danger">
-          Es gab einen Fehler beim Senden Ihrer Nachricht. Bitte versuchen Sie es erneut.
+          Es gab einen Fehler beim Senden Ihrer Nachricht. Bitte versuchen Sie es erneut.<br><br>
+          {{ errorMsg }}
         </div>
       </div>
     </div>
