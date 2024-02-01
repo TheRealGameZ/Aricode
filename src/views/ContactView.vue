@@ -43,9 +43,9 @@ export default {
     })
     .then(() => {
 
-      name= '';
-      email = '';
-      text = '';
+      name.value= '';
+      email.value = '';
+      text.value = '';
       btn.disabled = true;
 
       this.formSuccess = true;
