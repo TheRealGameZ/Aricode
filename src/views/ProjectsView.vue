@@ -1,16 +1,20 @@
 <template>
   <div class="row">
     <header class="text-center">
-      <h2>Certificates</h2>
+      <h2>Projects</h2>
       <div class="horizontalLine"></div>
     </header>
     <div class="container">
-      <div class="row g-4">
+      <div class="row g-5">
         <div class="col d-flex mx-auto align-items-center justify-content-center"
              v-for="(card, index) in flipCards"
              :key="card"
              @mouseover="flipCard(index)">
-          <flip-cart :title="card.title" :content="card.content" :class="{ 'hover': flippedCard === index }"></flip-cart>
+          <div class="borderContainer p-4 text-center" style="width: 300px; height: 300px;">
+            <h5 class="mb-3">{{ card.title }}</h5>
+            <p class="mb-5">{{ card.text }}</p>
+            <p :style="{ color: card.color }">{{ card.link }}</p>
+          </div> 
         </div>
       </div>
     </div>
@@ -18,7 +22,6 @@
 </template>
 
 <script>
-import FlipCart from "@/components/FlipCart.vue";
 
 export default {
   data() {
@@ -31,11 +34,10 @@ export default {
     element.classList.add('headerHeightSmall');
   },
 
-  components: {FlipCart },
   methods: {
     flipCard(index) {
       this.flippedCard = index;
-    },
+    }
   },
 }
 </script>

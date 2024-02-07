@@ -1,5 +1,6 @@
 {
   "certificates" : [
+    { "title": "FrontEnd Developer", "content": "" },
     { "title": "JavaScript Course", "content": "https://www.codecademy.com/profiles/AndreasRichter/certificates/705dcb15de0da4dd9d9fc4f3274b430e" },
     { "title": "SQL Course", "content": "https://www.codecademy.com/profiles/AndreasRichter/certificates/042a4e5884e3eb6ea1f2a12be6abb851" },
     { "title": "Java Course", "content": "https://www.codecademy.com/profiles/AndreasRichter/certificates/d3f89367b558583e361640f778191345" },
@@ -7,10 +8,13 @@
     { "title": "Vue.js Course", "content": "https://www.codecademy.com/profiles/AndreasRichter/certificates/db927a84bf4bba96bb285ee6a85466fc" },
     { "title": "HTML Course", "content": "https://www.codecademy.com/profiles/AndreasRichter/certificates/9eb0741e5ebef1f9f58a53bfac67d3a7" }
   ],
+  "Coursecertificates" : [
+    
+  ],
   "projects" : [
-     { "title": "Headless Salesforce Commerce", "content" : ""},
-     { "title": "Virtual Marple Jar", "content" : ""},
-     { "title": "Movie/Serien Rating", "content" : ""},
-     { "title": "Wheather App", "content" : "weather.aricode.de"}
+     { "title": "Headless Salesforce Commerce", "text": "Proof of concept for a SpringBoot-Application with Salesforce Headless Lightning", "link" : "Confidential", "color" : "red"},
+     { "title": "Virtual Marple Jar", "text": "Collect Mapels in a Jar to reach/view your Goals", "link": "In Progress", "color" : "orange"},
+     { "title": "Movie/TV Show Rating", "text": "Select and Rate Movies/TV-Shows", "link" : "In Progress", "color" : "orange"},
+     { "title": "Wheather App", "text": "Show the current Whetherdata from a location", "link" : "In Progress", "color" : "orange"}
   ]
 }

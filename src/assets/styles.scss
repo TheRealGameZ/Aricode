@@ -20,6 +20,14 @@ header {
         justify-self: center;
         align-self: center;
     }
+
+    .horizontalLine-highlight{
+      background-color: $highlight;
+      width: 50px;
+      height: 5px;
+      justify-self: center;
+      align-self: center;
+  }
 }
 
 .mainHeader {

@@ -1,10 +1,8 @@
 <script>
-import PercentageCircle from "@/components/PercentageCircle.vue";
 import { ref } from "vue";
 
 export default {
   name: "HomeView",
-  components: { PercentageCircle },
     mounted() {
       document.getElementById('headerContainer').classList.remove('headerHeightSmall');
     },
@@ -76,7 +74,7 @@ export default {
           >
             <i class="bi bi-chat-square-dots"></i>
           </div>
-          <h3>Collaborative Tech Mentor</h3>
+          <h3>Collaborative Tech/Math Mentor</h3>
           <p>Giving basic Code-Courses</p>
         </div>
         <div class="col fade-in anim-delay-2000ms">
@@ -86,7 +84,7 @@ export default {
             <i class="bi bi-lightbulb"></i>
           </div>
           <h3>Innovative Architect</h3>
-          <p>Pioneer in introducing Headless-Salesforce architecture</p>
+          <p>Introducing Headless-Salesforce architecture</p>
         </div>
       </div>
     </div>
@@ -101,38 +99,26 @@ export default {
           <p>
             I'm a software engineer based in Gera with 2 years of experience in
             Commerce. My focus area for the past few months has been a mix of
-            front- and backend development in Salesforce B2B Commerce.
+            front- and backend development in Salesforce B2B Lightning.
           </p>
         </div>
         <div class="col-6">
-          <div class="row d-flex text-center mb-3 fade-in anim-delay-1000ms">
-            <div class="col">
-              <PercentageCircle :percentage="80"></PercentageCircle>
+          <h3 class="text-center fade-in anim-delay-1000ms">Skills</h3>
+          <div class="row d-flex text-center mb-3 mt-5 fade-in anim-delay-1000ms gap-5">
+            <div class="col text-center borderContainer p-2"> 
+              <h5 class="mb-3">Coding Experience</h5>
+              <h6>Java / Apex</h6>
               <h6>HTML/CSS</h6>
-            </div>
-            <div class="col text-center mb-3">
-              <PercentageCircle :percentage="70"></PercentageCircle>
-              <h6>Java</h6>
-            </div>
-          </div>
-          <div class="row d-flex text-center mb-3 fade-in anim-delay-1000ms">
-            <div class="col">
-              <PercentageCircle :percentage="50"></PercentageCircle>
               <h6>JavaScript & npm</h6>
-            </div>
-            <div class="col">
-              <PercentageCircle :percentage="40"></PercentageCircle>
-              <h6>Salesforce Commerce Cloud</h6>
-            </div>
-          </div>
-          <div class="row d-flex text-center mb-3 fade-in anim-delay-1000ms">
-            <div class="col">
-              <PercentageCircle :percentage="40"></PercentageCircle>
-              <h6>SpringBoot & Thymeleaf</h6>
-            </div>
-            <div class="col">
-              <PercentageCircle :percentage="30"></PercentageCircle>
               <h6>C & C#</h6>
+            </div>
+            <div class="col text-center borderContainer p-2">
+              <h5 class="mb-3">Technology Experience</h5>
+              <h6>Salesforce Commerce Cloud</h6>
+              <h6>SpringBoot & Thymeleaf</h6>
+              <h6>Vue.js, React.js</h6>
+              <h6>Git/GitHub/GitLab</h6>
+              <h6>Confluence/Jira</h6>
             </div>
           </div>
         </div>
@@ -140,19 +126,19 @@ export default {
     </div>
   </div>
   <div class="row">
-    <header class="text-center">
+    <header class="text-center fade-in anim-delay-1000ms">
       <h2>Experience</h2>
       <div class="horizontalLine"></div>
     </header>
     <div class="container">
       <div class="row p-5 mb-5 fade-in anim-delay-500ms borderContainer">
-        <h3>IT-Soldier</h3>
-        <span class="mb-2 fst-italic">Bundeswehr, Sonderhausen, Germany – (Sep 2020 - Okt 2021)</span>
-        <p>
-          Served as an IT soldier, contributing to the operational efficiency of the IT department.
-          Provided administrative assistance to the IT department, ensuring smooth operations and effective communication.
-          Conducted maintenance and configuration tasks for IT hardware, ensuring optimal performance.
-          Assisted in the training of new recruits, contributing to the onboarding process and knowledge transfer.
+        <h3>Software Engineer II</h3>
+        <span class="mb-2 fst-italic">dotSource SE, Jena, Germany – (Dec 2022 - Present)</span>
+        <p>      
+          Fullstack Web Developer in Salesforce with a focus on B2B Lightning and Commerce Cloud.
+          Started the implementation of Headless-Salesforce Architecture, establishing its presence within the company with a sientific Work.
+          Contributed to the creation of tailored B2B webshops for clients, showcasing expertise in Salesforce technologies.
+          Played a pivotal role in the "Code-Camp", imparting foundational skills in CSS, HTML, and JavaScript to students.
         </p>
       </div>
       <div class="row p-5 mb-5 fade-in anim-delay-500ms borderContainer">
@@ -171,13 +157,13 @@ export default {
         </p>
       </div>
       <div class="row p-5 mb-5 fade-in anim-delay-500ms borderContainer">
-        <h3>Software Engineer II</h3>
-        <span class="mb-2 fst-italic">dotSource SE, Jena, Germany – (Dec 2022 - Present)</span>
-        <p>      
-          Specialized Fullstack Web Developer in Salesforce with a focus on B2B Commerce and Commerce Cloud.
-          Started the implementation of Headless-Salesforce Architecture, establishing its presence within the company.
-          Contributed to the creation of tailored webshops for clients, showcasing expertise in Salesforce technologies.
-          Played a pivotal role in the "Code-Camp," imparting foundational skills in CSS, HTML, and JavaScript to students.
+        <h3>IT-Soldier</h3>
+        <span class="mb-2 fst-italic">Bundeswehr, Sonderhausen, Germany – (Sep 2020 - Okt 2021)</span>
+        <p>
+          Served as an IT soldier, contributing to the operational efficiency of the IT department.
+          Provided administrative assistance to the IT department, ensuring smooth operations and effective communication.
+          Conducted maintenance and configuration tasks for IT hardware, ensuring optimal performance.
+          Assisted in the training of new recruits, contributing to the onboarding process and knowledge transfer.
         </p>
       </div>
     </div>
