@@ -105,11 +105,11 @@ export default {
         <div class="col-6">
           <h3 class="text-center fade-in anim-delay-1000ms">Skills</h3>
           <div class="row d-flex text-center mb-3 mt-5 fade-in anim-delay-1000ms gap-5">
-            <div class="col text-center borderContainer p-2"> 
+            <div class="col text-center borderContainer p-2">
               <h5 class="mb-3">Coding Experience</h5>
               <h6>Java / Apex</h6>
               <h6>HTML/CSS</h6>
-              <h6>JavaScript & npm</h6>
+              <h6>JavaScript</h6>
               <h6>C & C#</h6>
             </div>
             <div class="col text-center borderContainer p-2">
@@ -119,6 +119,7 @@ export default {
               <h6>Vue.js, React.js</h6>
               <h6>Git/GitHub/GitLab</h6>
               <h6>Confluence/Jira</h6>
+              <h6>Node.js, Express.js</h6>
             </div>
           </div>
         </div>
@@ -132,9 +133,9 @@ export default {
     </header>
     <div class="container">
       <div class="row p-5 mb-5 fade-in anim-delay-500ms borderContainer">
-        <h3>Software Engineer II</h3>
+        <h3>Fullstack Web-Developer</h3>
         <span class="mb-2 fst-italic">dotSource SE, Jena, Germany – (Dec 2022 - Present)</span>
-        <p>      
+        <p>
           Fullstack Web Developer in Salesforce with a focus on B2B Lightning and Commerce Cloud.
           Started the implementation of Headless-Salesforce Architecture, establishing its presence within the company with a sientific Work.
           Contributed to the creation of tailored B2B webshops for clients, showcasing expertise in Salesforce technologies.

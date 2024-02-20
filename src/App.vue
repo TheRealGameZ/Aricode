@@ -17,9 +17,13 @@
   <div class="container pt-5">
     <router-view></router-view>
   </div>
-  <div class="container-fluid" style="margin-top: 100px;">
+  <div class="container-fluid mt-5">
     <div class="row">
       <footer-bar></footer-bar>
+    </div>
+    <!-- Copyright Row -->
+    <div class="row text-center mt-3">
+      <p>© 2023, Andreas Richter. Alle Rechte vorbehalten.</p>
     </div>
   </div>
 </template>
